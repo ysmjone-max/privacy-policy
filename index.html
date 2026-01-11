@@ -1,118 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <title>Mezgeb</title>
-  
-  <!-- Modern Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy | Mezgeb</title>
 
   <style>
     :root {
-      --primary-color: #3880ff; /* Capacitor Blue */
-      --bg-color: #ffffff;
-      --text-color: #1a1a1a;
-      --safe-area-top: env(safe-area-inset-top);
+      --primary: #8B5CF6;      /* Main purple */
+      --secondary: #A78BFA;    /* Light purple */
+      --background: #F5F3FF;   /* Very light violet */
+      --card-bg: #FFFFFF;
+      --text-main: #1F2937;
+      --text-muted: #6B7280;
+      --border: #E5E7EB;
     }
 
     * {
       box-sizing: border-box;
-      -webkit-tap-highlight-color: transparent;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
     }
 
     body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: var(--bg-color);
-      color: var(--text-color);
-      line-height: 1.5;
-      /* Prevents bouncing on iOS */
-      overflow: hidden; 
-      height: 100vh;
-      width: 100vw;
-    }
-
-    .app-container {
-      display: flex;
-      flex-direction: column;
-      height: 100%;
-      /* Respects the "Notch" on modern phones */
-      padding-top: var(--safe-area-top);
+      background: var(--background);
+      color: var(--text-main);
+      line-height: 1.7;
     }
 
     header {
-      padding: 1rem;
-      background: var(--primary-color);
-      color: white;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: #fff;
+      padding: 2.5rem 1.5rem;
       text-align: center;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 0.95rem;
+      opacity: 0.9;
     }
 
     main {
-      flex: 1;
-      overflow-y: auto;
-      padding: 20px;
-      -webkit-overflow-scrolling: touch;
+      max-width: 900px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
     }
 
     .card {
-      background: #f8f9fa;
-      border-radius: 12px;
+      background: var(--card-bg);
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      border: 1px solid var(--border);
+    }
+
+    section {
+      margin-bottom: 2.2rem;
+    }
+
+    section:last-child {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      color: var(--primary);
+      font-size: 1.35rem;
+      margin-bottom: 0.6rem;
+    }
+
+    p {
+      color: var(--text-main);
+      margin-bottom: 0.6rem;
+    }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-top: 0.4rem;
+    }
+
+    ul li {
+      margin-bottom: 0.4rem;
+      color: var(--text-main);
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
       padding: 1.5rem;
-      margin-bottom: 1rem;
-      border: 1px solid #e9ecef;
+      font-size: 0.9rem;
+      color: var(--text-muted);
     }
 
-    h1 { margin: 0; font-size: 1.25rem; }
-    
-    button {
-      background: var(--primary-color);
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
+    footer span {
+      color: var(--primary);
       font-weight: 600;
-      cursor: pointer;
-      width: 100%;
-      font-size: 1rem;
     }
 
-    button:active {
-      opacity: 0.8;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+      .card {
+        padding: 1.5rem;
+      }
     }
   </style>
 </head>
+
 <body>
 
-  <div class="app-container">
-    <header>
-      <h1>Mezgeb</h1>
-    </header>
+  <header>
+    <h1>Privacy Policy</h1>
+    <p>Mezgeb • Last Updated: <strong>[Insert Date]</strong></p>
+  </header>
 
-    <main>
-      <div class="card">
-        <h2>Welcome to Mezgeb</h2>
-        <p>Your modern mobile application experience starts here.</p>
-        <button id="actionBtn">Get Started</button>
-      </div>
-      
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="https://ysmione-max.github.io/privacy-policy/" style="color: #666; text-decoration: none; font-size: 0.8rem;">
-          Privacy Policy
-        </a>
-      </div>
-    </main>
-  </div>
+  <main>
+    <div class="card">
 
-  <script>
-    document.getElementById('actionBtn').addEventListener('click', () => {
-      alert('Welcome to Mezgeb!');
-    });
-  </script>
+      <section>
+        <h2>1. Introduction</h2>
+        <p>
+          Welcome to <strong>Mezgeb</strong>. Your privacy matters to us.
+          This Privacy Policy explains how we collect, use, and protect your
+          information when you use our application.
+        </p>
+      </section>
+
+      <section>
+        <h2>2. Information We Collect</h2>
+        <p><strong>Personal Data</strong></p>
+        <p class="muted">
+          Mezgeb does not require you to provide personal information
+          (such as name or email) to use its basic features.
+          Any personal data is provided voluntarily by you.
+        </p>
+
+        <p><strong>Usage Data</strong></p>
+        <p class="muted">
+          We may collect limited technical information such as IP address,
+          device type, operating system version, and app version
+          to improve app performance and stability.
+        </p>
+      </section>
+
+      <section>
+        <h2>3. App Permissions</h2>
+        <p>Mezgeb may request the following permissions:</p>
+        <ul>
+          <li><strong>Internet Access</strong> – to connect to servers and deliver app features.</li>
+          <li><strong>Other Permissions</strong> – only if required for specific features (clearly disclosed in-app).</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4. Third-Party Services</h2>
+        <p class="muted">
+          We may use trusted third-party services such as analytics or
+          performance monitoring tools (e.g., Google Analytics, Firebase).
+          These services access data only to perform tasks on our behalf
+          and are obligated to keep it confidential.
+        </p>
+      </section>
+
+      <section>
+        <h2>5. Data Security</h2>
+        <p class="muted">
+          We take reasonable measures to protect your information.
+          However, no method of transmission over the Internet or
+          electronic storage is completely secure.
+        </p>
+      </section>
+
+      <section>
+        <h2>6. Children’s Privacy</h2>
+        <p class="muted">
+          Mezgeb does not knowingly collect personal data from children
+          under the age of 13. If you believe that a child has provided
+          personal information, please contact us so we can remove it.
+        </p>
+      </section>
+
+      <section>
+        <h2>7. Changes to This Policy</h2>
+        <p class="muted">
+          We may update this Privacy Policy from time to time.
+          Any changes will be posted on this page with an updated date.
+        </p>
+      </section>
+
+      <section>
+        <h2>8. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy, contact us at:</p>
+        <ul>
+          <li>Email: <strong>[your-email@example.com]</strong></li>
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    © <span>Mezgeb</span>. All rights reserved.
+  </footer>
 
 </body>
 </html>
