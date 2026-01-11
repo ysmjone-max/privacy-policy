@@ -1,218 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy | Mezgeb</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Privacy Policy | Mezgeb</title>
 
-  <style>
-    :root {
-      --primary: #8B5CF6;      /* Main purple */
-      --secondary: #A78BFA;    /* Light purple */
-      --background: #F5F3FF;   /* Very light violet */
-      --card-bg: #FFFFFF;
-      --text-main: #1F2937;
-      --text-muted: #6B7280;
-      --border: #E5E7EB;
-    }
+<style>
+:root {
+  --purple-main: #8B5CF6;
+  --purple-light: #A78BFA;
+  --purple-bg: #F5F3FF;
+  --card-bg: #FFFFFF;
+  --text-dark: #1F2937;
+  --text-soft: #6B7280;
+  --border-soft: #E5E7EB;
+}
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-    }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
 
-    body {
-      background: var(--background);
-      color: var(--text-main);
-      line-height: 1.7;
-    }
+body {
+  background: linear-gradient(180deg, #F5F3FF 0%, #FFFFFF 100%);
+  color: var(--text-dark);
+  line-height: 1.75;
+}
 
-    header {
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: #fff;
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-    }
+/* Header */
+header {
+  background: linear-gradient(135deg, var(--purple-main), var(--purple-light));
+  padding: 3rem 1.5rem;
+  text-align: center;
+  color: #fff;
+}
 
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.5px;
+}
 
-    header p {
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
+header p {
+  margin-top: 0.6rem;
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
 
-    main {
-      max-width: 900px;
-      margin: 2.5rem auto;
-      padding: 0 1.5rem;
-    }
+/* Main container */
+main {
+  max-width: 900px;
+  margin: -3rem auto 3rem;
+  padding: 0 1.5rem;
+}
 
-    .card {
-      background: var(--card-bg);
-      border-radius: 14px;
-      padding: 2rem;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-      border: 1px solid var(--border);
-    }
+/* Card */
+.card {
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 45px rgba(139, 92, 246, 0.15);
+  border: 1px solid var(--border-soft);
+}
 
-    section {
-      margin-bottom: 2.2rem;
-    }
+/* Sections */
+section {
+  margin-bottom: 2.8rem;
+  position: relative;
+  padding-left: 1.2rem;
+}
 
-    section:last-child {
-      margin-bottom: 0;
-    }
+section::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    var(--purple-main),
+    transparent
+  );
+  border-radius: 10px;
+}
 
-    h2 {
-      color: var(--primary);
-      font-size: 1.35rem;
-      margin-bottom: 0.6rem;
-    }
+section:last-child {
+  margin-bottom: 0;
+}
 
-    p {
-      color: var(--text-main);
-      margin-bottom: 0.6rem;
-    }
+h2 {
+  font-size: 1.4rem;
+  color: var(--purple-main);
+  margin-bottom: 0.7rem;
+}
 
-    ul {
-      margin-left: 1.2rem;
-      margin-top: 0.4rem;
-    }
+p {
+  margin-bottom: 0.6rem;
+}
 
-    ul li {
-      margin-bottom: 0.4rem;
-      color: var(--text-main);
-    }
+.soft {
+  color: var(--text-soft);
+}
 
-    .muted {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-    }
+/* Lists */
+ul {
+  margin-top: 0.5rem;
+  margin-left: 1.3rem;
+}
 
-    footer {
-      text-align: center;
-      padding: 1.5rem;
-      font-size: 0.9rem;
-      color: var(--text-muted);
-    }
+li {
+  margin-bottom: 0.4rem;
+}
 
-    footer span {
-      color: var(--primary);
-      font-weight: 600;
-    }
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text-soft);
+}
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 1.8rem;
-      }
-      .card {
-        padding: 1.5rem;
-      }
-    }
-  </style>
+footer span {
+  color: var(--purple-main);
+  font-weight: 600;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .card {
+    padding: 1.8rem;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Privacy Policy</h1>
-    <p>Mezgeb • Last Updated: <strong>[Insert Date]</strong></p>
-  </header>
+<header>
+  <h1>Privacy Policy</h1>
+  <p>Mezgeb • Last Updated: <strong>[Insert Date]</strong></p>
+</header>
 
-  <main>
-    <div class="card">
+<main>
+  <div class="card">
 
-      <section>
-        <h2>1. Introduction</h2>
-        <p>
-          Welcome to <strong>Mezgeb</strong>. Your privacy matters to us.
-          This Privacy Policy explains how we collect, use, and protect your
-          information when you use our application.
-        </p>
-      </section>
+    <section>
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to <strong>Mezgeb</strong>. We are committed to protecting your
+        personal information and your right to privacy. This Privacy Policy
+        explains what information we collect, how we use it, and what rights
+        you have in relation to it.
+      </p>
+    </section>
 
-      <section>
-        <h2>2. Information We Collect</h2>
-        <p><strong>Personal Data</strong></p>
-        <p class="muted">
-          Mezgeb does not require you to provide personal information
-          (such as name or email) to use its basic features.
-          Any personal data is provided voluntarily by you.
-        </p>
+    <section>
+      <h2>2. Information We Collect</h2>
+      <p><strong>Personal Data</strong></p>
+      <p class="soft">
+        We do not require you to provide personal information (such as name
+        or email) to use the basic features of Mezgeb, unless you voluntarily
+        provide it.
+      </p>
 
-        <p><strong>Usage Data</strong></p>
-        <p class="muted">
-          We may collect limited technical information such as IP address,
-          device type, operating system version, and app version
-          to improve app performance and stability.
-        </p>
-      </section>
+      <p><strong>Usage Data</strong></p>
+      <p class="soft">
+        We may collect technical information such as IP address, device type,
+        operating system, and app version to improve performance and reliability.
+      </p>
+    </section>
 
-      <section>
-        <h2>3. App Permissions</h2>
-        <p>Mezgeb may request the following permissions:</p>
-        <ul>
-          <li><strong>Internet Access</strong> – to connect to servers and deliver app features.</li>
-          <li><strong>Other Permissions</strong> – only if required for specific features (clearly disclosed in-app).</li>
-        </ul>
-      </section>
+    <section>
+      <h2>3. Permissions</h2>
+      <p>Our app may request the following permissions:</p>
+      <ul>
+        <li><strong>Internet Access</strong> – to connect to servers and provide app content.</li>
+        <li><strong>Other Permissions</strong> – only when required for specific features.</li>
+      </ul>
+    </section>
 
-      <section>
-        <h2>4. Third-Party Services</h2>
-        <p class="muted">
-          We may use trusted third-party services such as analytics or
-          performance monitoring tools (e.g., Google Analytics, Firebase).
-          These services access data only to perform tasks on our behalf
-          and are obligated to keep it confidential.
-        </p>
-      </section>
+    <section>
+      <h2>4. Third-Party Services</h2>
+      <p class="soft">
+        We may use third-party services such as analytics or crash reporting tools
+        (e.g., Google Analytics, Firebase). These services are used solely to
+        improve the app and are bound by confidentiality obligations.
+      </p>
+    </section>
 
-      <section>
-        <h2>5. Data Security</h2>
-        <p class="muted">
-          We take reasonable measures to protect your information.
-          However, no method of transmission over the Internet or
-          electronic storage is completely secure.
-        </p>
-      </section>
+    <section>
+      <h2>5. Security</h2>
+      <p class="soft">
+        We value your trust and apply reasonable security measures. However,
+        no method of electronic storage or internet transmission is 100% secure.
+      </p>
+    </section>
 
-      <section>
-        <h2>6. Children’s Privacy</h2>
-        <p class="muted">
-          Mezgeb does not knowingly collect personal data from children
-          under the age of 13. If you believe that a child has provided
-          personal information, please contact us so we can remove it.
-        </p>
-      </section>
+    <section>
+      <h2>6. Children’s Privacy</h2>
+      <p class="soft">
+        Mezgeb does not knowingly collect personal information from children
+        under the age of 13.
+      </p>
+    </section>
 
-      <section>
-        <h2>7. Changes to This Policy</h2>
-        <p class="muted">
-          We may update this Privacy Policy from time to time.
-          Any changes will be posted on this page with an updated date.
-        </p>
-      </section>
+    <section>
+      <h2>7. Changes to This Privacy Policy</h2>
+      <p class="soft">
+        This Privacy Policy may be updated periodically. Any changes will be
+        posted on this page with an updated date.
+      </p>
+    </section>
 
-      <section>
-        <h2>8. Contact Us</h2>
-        <p>If you have questions about this Privacy Policy, contact us at:</p>
-        <ul>
-          <li>Email: <strong>[your-email@example.com]</strong></li>
-        </ul>
-      </section>
+    <section>
+      <h2>8. Contact Us</h2>
+      <p>If you have any questions about this Privacy Policy:</p>
+      <ul>
+        <li>Email: <strong>[your-email@example.com]</strong></li>
+      </ul>
+    </section>
 
-    </div>
-  </main>
+  </div>
+</main>
 
-  <footer>
-    © <span>Mezgeb</span>. All rights reserved.
-  </footer>
+<footer>
+  © <span>Mezgeb</span>. All rights reserved.
+</footer>
 
 </body>
 </html>
